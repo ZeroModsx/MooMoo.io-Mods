@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        😎ƤŘØĴ€ĆŦ Ø₣ βΔŇ ĦΔĆҜ€ŘŞ😎
 // @namespace    -
-// @version     v1
+// @version     v2
 // @description Ez
 // @author     Zeldris Ban, SecretWarrior,Ǥᑌᗰᙖᗩᒪᒪ乙 ᗰ〇Ðs [ʙᴀɴ]#2064
 // @match        *://moomoo.io/*

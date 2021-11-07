@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name        😎ƤŘØĴ€ĆŦ Ø₣ βΔŇ ĦΔĆҜ€ŘŞ😎
+// @name        βΔŇ 🎃ĦΔŁŁØŴ€€Ň🎃 ΜØĐ      (BeTa)
 // @namespace    -
-// @version     v2
+// @version     v1(Beta)
 // @description Ez
 // @author     Zeldris Ban, SecretWarrior,Ǥᑌᗰᙖᗩᒪᒪ乙 ᗰ〇Ðs [ʙᴀɴ]#2064
 // @match        *://moomoo.io/*
@@ -664,7 +664,7 @@ function handleMessage(m){
             let ObjectData = data[1].slice(8*i, 8*i+8);
             if (ObjectData[6] == 15 && ObjectData[7] != myPlayer.id && ((playerClan[ObjectData[7]] != myPlayer.clan && myPlayer.clan != null) || (myPlayer.clan == null))) {
                 if(Math.sqrt(Math.pow((myPlayer.y-ObjectData[2]), 2) + Math.pow((myPlayer.x-ObjectData[1]), 2)) < 90){
-                    chat("Anti Trap :D");
+                    chat("Ops!! No Use Traps Noob ;)");
                     for (let i=0;i<15;i++){
                         place(millType, nearestEnemyAngle+toRad(30*i));
                     }
@@ -833,7 +833,7 @@ var mill = repeater(78, () => {
     place(millType,Math.atan2(mouseY - height / 2, mouseX - width / 2)-toRad(67))
     place(millType);
     move(180);
-    chat("Ban Windmills");
+    chat("Ban Windmills : On");
 }, 140);
 var trap = repeater(70, () => {
     place(boostType);place(boostType);place(boostType);
@@ -866,11 +866,11 @@ document.addEventListener('keydown', (e)=>{
     if(e.keyCode == 90 && document.activeElement.id.toLowerCase() !== 'chatbox') {
         hat(40);
         acc(21);
-        chat("Ban Tank Gear");
+        chat("Ban Tank Gear : On");
     }
     if(e.keyCode == 188 && document.activeElement.id.toLowerCase() !== 'chatbox') {
         hat(7);
-        acc(13);chat("Ban Bull + angel wings");
+        acc(13);chat("Ban Bull + angel wings : On");
         setTimeout(() => {
             normal();
         }, 1000);
@@ -897,13 +897,28 @@ document.addEventListener('keydown', (e)=>{
             autoreplace=false;
         }
     }
-    if(e.keyCode == 84 && document.activeElement.id.toLowerCase() !== 'chatbox') {
-        chat("Ban EMP Gear!");
-        hat(22);
+    if(e.keyCode == 73 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        chat("Ban Invis Instakill : On");
+        hat(56);
+        acc(19);
     }
-    if(e.keyCode == 76 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        if(e.keyCode == 84 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        chat("Ban EMP Gear : On");
+        hat(22);
+        acc(19);
+    }
+        if(e.keyCode == 16 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        chat("Ban Biome Hat : On");
+    }
+    if(e.keyCode == 82 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        chat("Best Insta You Die +1 Kill");
+    }
+        if(e.keyCode == 36 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        chat("Ban Police Hat : On");
+    }
+    if(e.keyCode == 71 && document.activeElement.id.toLowerCase() !== 'chatbox') {
         if(secondary == 9) {
-            chat("Ban Bow Insta");autoaim=true;//
+            chat("Ban Bow Bow Insta Bye Noob");autoaim=true;//
             UseSecondary();UseSecondary();chose(38);
             doNewSend(["7",[1]]);
             hat(53);
@@ -921,11 +936,11 @@ document.addEventListener('keydown', (e)=>{
                 acc(21);
             }, 180);
         }else {
-            chat("Ban Bow Insta");
+            chat("Ban Bow Bow Insta Bye Noob");
         }
     }
     if(e.keyCode == 32 && document.activeElement.id.toLowerCase() !== 'chatbox') {
-        chat("Ban Spike");doNewSend(["7",[1]]);
+        chat("Ban SpikeKill");doNewSend(["7",[1]]);
         UsePrimary();UsePrimary();autoaim=true;
         hat(7);
         acc(0);
@@ -963,6 +978,14 @@ document.addEventListener('keydown', (e)=>{
         }, 240);
     }
 })
+let newImg = document.createElement("img");
+newImg.src = "https://th.bing.com/th/id/R.e62a7249b6d14b0a20fae29c1405ca8e?rik=hvJeEu4gvuJsVw&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fpapirus-team%2fpapirus-apps%2f64%2fdiscord-icon.png&ehk=xr2PPSLHvYAjnDf7O9oGmkKZH31imbSA5%2fsCyQICLqY%3d&risl=&pid=ImgRaw&r=0";
+newImg.style = `position: absolute; bottom: 200px; left: 15px; z-index: 100000; width: 65px; height: 65px; cursor: pointer;`;
+document.body.prepend(newImg);
+
+newImg.addEventListener("click", () => {
+    let w = window.open("https://discord.gg/yb2TdgGMZQ", null, `height=1199, width=650, status=yes, toolbar=no, menubar=no, location=no`);
+});
 var autolongmusk=false;
 function LongSwordMusket() {
     doNewSend(["6", [7]]);doNewSend(["6", [17]]);doNewSend(["6", [31]]);doNewSend(["6", [23]]);doNewSend(["6", [10]]);doNewSend(["6", [38]]);doNewSend(["6", [4]]);doNewSend(["6", [15]]);
@@ -971,17 +994,22 @@ const pingDisplay = $("#pingDisplay");
 pingDisplay.css("top", "20px");
 pingDisplay.css("font-size", "35px");
 pingDisplay.css("display", "block");
+document.getElementById("loadingText").innerHTML = "Loading Ban Helloween Mod...  ";
+document.getElementById("storeHolder").style = "height: 500px; width: 435px;";
+document.getElementById('gameName').style = "text-shadow: #13a10e 2px 2px 40px;";
+document.getElementById('diedText').style = "text-shadow: #13a10e 2px 2px 40px;";
+document.getElementById('loadingText').style = "text-shadow: #13a10e 2px 2px 40px;";
+document.getElementById("storeButton").innerHTML = "🛒";
+document.getElementById('chatButton').innerHTML = "💬";
+document.getElementById('allianceButton').innerHTML = "👋";
 $("body").append(pingDisplay);
-document.getElementById('gameName').innerHTML = 'ƤŘØĴ€ĆŦ βΔŇ';
-document.getElementById("gameName").style.color = "white";
+document.getElementById('gameName').innerHTML = '    🎃ĦΔŁŁØŴ€€Ň🎃    ';
+document.getElementById("gameName").style.color = "#f7630c";
 document.getElementById('diedText').innerHTML = '¥ØỮ ĐƗ€Đ';
-document.getElementById('diedText').style.color = 'red';
-//document.getElementById("gameName").style = "height: 50px; width: 25px;";
+document.getElementById('diedText').style.color = '#f7630c';
 $("#consentBlock").css({display: "none"});
 $("#youtuberOf").css({display: "none"});
 $("#mapDisplay").css({background: `url('https://i.imgur.com/fgFsQJp.png')`});
-$("#mainMenu")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/899692288903626827/899801261375897651/maxresdefault.jpg?width=874&height=492)"
-
 $("#enterGame").click( () => {
     selectSkinColor("constructor")
 });
@@ -4846,7 +4874,7 @@ e.init();
                     s.rotate(Math.PI / 4),
                     s.fillStyle = "#d76edb",
                     li(0, 0, .5 * e.scale, s, !0);
-                else if ("bait" == e.name) {
+                else if ("ban" == e.name) {
                     const t = 2.1 * e.scale
                       , n = t / 10;
                     s.translate(-i.width / 2.4, -i.height / 2.4),
@@ -6736,11 +6764,6 @@ e.init();
         place: !0,
         limit: 2,
         layer: -1
-    }, {
-        id: 14,
-        name: "bait",
-        layer: 1,
-        place: !0
     }],
     t.projectiles = [{
         indx: 0,
@@ -7338,9 +7361,9 @@ e.init();
         placeOffset: -5
     }, {
         group: e.exports.groups[14],
-        name: "bait",
-        desc: "baits nearby animals for a few seconds and gives them 10 health",
-        req: ["food", 15],
+        name: "ban",
+        desc: "Especial De 🎃Helloween🎃 Da Ban Obrigado Por Usar Nosso Mod, Se Inscreva Em Nosso Canal :D",
+        req: ["free", 0],
         health: 500,
         scale: 27,
         holdOffset: -5,
@@ -7390,7 +7413,7 @@ e.init();
             h) {
                 e.owner && e.pps && (e.owner.pps -= e.pps),
                 this.removeObjGrid(e),
-                "bait" === y.name && h.broadcast("12", e.sid);
+                "ban" === y.name && h.broadcast("12", e.sid);
                 var t = this.updateObjects.indexOf(e);
                 t >= 0 && this.updateObjects.splice(t, 1)
             }
@@ -7422,7 +7445,7 @@ e.init();
         this.add = function(n, i, r, s, a, o, c, l, u) {
             if (f++,
             y = null,
-            c && "bait" === c.name)
+            c && "ban" === c.name)
                 h && (y = new e(f),
                 t.push(y),
                 y.sid = f,
@@ -7446,7 +7469,7 @@ e.init();
                 y.init(i, r, s, a, o, c, u)
             }
             h && (this.setObjectGrids(y),
-            (y.doUpdate || "bait" === y.name) && this.updateObjects.push(y))
+            (y.doUpdate || "ban" === y.name) && this.updateObjects.push(y))
         }
         ,
         this.addBait = function(n, i, r, s, a, o) {
@@ -9315,6 +9338,1315 @@ e.init();
     ,
     s.prototype.ipToHex = function(e) {
         return e.split(".").map(e=>("00" + parseInt(e).toString(16)).substr(-2)).join("").toLowerCase()
+    }
+    ,
+    s.prototype.hashIP = function(e) {
+        return r(this.ipToHex(e))
+    }
+    ,
+    s.prototype.log = function() {
+        return this.debugLog ? console.log.apply(void 0, arguments) : console.verbose ? console.verbose.apply(void 0, arguments) : void 0
+    }
+    ,
+    s.prototype.stripRegion = function(e) {
+        return e.startsWith("vultr:") ? e = e.slice(6) : e.startsWith("do:") && (e = e.slice(3)),
+        e
+    }
+    ,
+    window.testVultrClient = function() {
+        var e = 1;
+        function t(t, n) {
+            (t = "" + t) == (n = "" + n) ? console.log(`Assert ${e} passed.`) : console.warn(`Assert ${e} failed. Expected ${n}, got ${t}.`),
+            e++
+        }
+        var n = new s("test.io",-1,5,1,!1);
+        n.errorCallback = function(e) {}
+        ,
+        n.processServers(function(e) {
+            var t = [];
+            for (var n in e)
+                for (var i = e[n], r = 0; r < i.length; r++)
+                    t.push({
+                        ip: n + ":" + r,
+                        scheme: "testing",
+                        region: n,
+                        index: r,
+                        games: i[r].map(e=>({
+                            playerCount: e,
+                            isPrivate: !1
+                        }))
+                    });
+            return console.log("gen", t),
+            t
+        }({
+            1: [[0, 0, 0, 0], [0, 0, 0, 0]],
+            2: [[5, 1, 0, 0], [0, 0, 0, 0]],
+            3: [[5, 0, 1, 5], [0, 0, 0, 0]],
+            4: [[5, 1, 1, 5], [1, 0, 0, 0]],
+            5: [[5, 1, 1, 5], [1, 0, 4, 0]],
+            6: [[5, 5, 5, 5], [2, 3, 1, 4]],
+            7: [[5, 5, 5, 5], [5, 5, 5, 5]]
+        })),
+        t(n.seekServer(1, !1), [1, 0, 0]),
+        t(n.seekServer(1, !0), [1, 1, 3]),
+        t(n.seekServer(2, !1), [2, 0, 1]),
+        t(n.seekServer(2, !0), [2, 1, 3]),
+        t(n.seekServer(3, !1), [3, 0, 2]),
+        t(n.seekServer(3, !0), [3, 1, 3]),
+        t(n.seekServer(4, !1), [4, 0, 1]),
+        t(n.seekServer(4, !0), [4, 1, 3]),
+        t(n.seekServer(5, !1), [5, 1, 2]),
+        t(n.seekServer(5, !0), [5, 1, 3]),
+        t(n.seekServer(6, !1), [6, 1, 3]),
+        t(n.seekServer(6, !0), void 0),
+        t(n.seekServer(7, !1), void 0),
+        t(n.seekServer(7, !0), void 0),
+        console.log("Tests passed.")
+    }
+    ;
+    var a = function(e, t) {
+        return e.concat(t)
+    };
+    Array.prototype.flatMap = function(e) {
+        return function(e, t) {
+            return t.map(e).reduce(a, [])
+        }(e, this)
+    }
+    ,
+    e.exports = s
+}
+, function(e, t, n) {
+    "use strict";
+    var i = n(60)
+      , r = n(62);
+    function s() {
+        this.protocol = null,
+        this.slashes = null,
+        this.auth = null,
+        this.host = null,
+        this.port = null,
+        this.hostname = null,
+        this.hash = null,
+        this.search = null,
+        this.query = null,
+        this.pathname = null,
+        this.path = null,
+        this.href = null
+    }
+    t.parse = v,
+    t.resolve = function(e, t) {
+        return v(e, !1, !0).resolve(t)
+    }
+    ,
+    t.resolveObject = function(e, t) {
+        return e ? v(e, !1, !0).resolveObject(t) : t
+    }
+    ,
+    t.format = function(e) {
+        return r.isString(e) && (e = v(e)),
+        e instanceof s ? e.format() : s.prototype.format.call(e)
+    }
+    ,
+    t.Url = s;
+    var a = /^([a-z0-9.+-]+:)/i
+      , o = /:[0-9]*$/
+      , c = /^(\/\/?(?!\/)[^\?\s]*)(\?[^\s]*)?$/
+      , l = ["{", "}", "|", "\\", "^", "`"].concat(["<", ">", '"', "`", " ", "\r", "\n", "\t"])
+      , h = ["'"].concat(l)
+      , u = ["%", "/", "?", ";", "#"].concat(h)
+      , f = ["/", "?", "#"]
+      , d = /^[+a-z0-9A-Z_-]{0,63}$/
+      , p = /^([+a-z0-9A-Z_-]{0,63})(.*)$/
+      , g = {
+        javascript: !0,
+        "javascript:": !0
+    }
+      , m = {
+        javascript: !0,
+        "javascript:": !0
+    }
+      , y = {
+        http: !0,
+        https: !0,
+        ftp: !0,
+        gopher: !0,
+        file: !0,
+        "http:": !0,
+        "https:": !0,
+        "ftp:": !0,
+        "gopher:": !0,
+        "file:": !0
+    }
+      , k = n(63);
+    function v(e, t, n) {
+        if (e && r.isObject(e) && e instanceof s)
+            return e;
+        var i = new s;
+        return i.parse(e, t, n),
+        i
+    }
+    s.prototype.parse = function(e, t, n) {
+        if (!r.isString(e))
+            throw new TypeError("Parameter 'url' must be a string, not " + typeof e);
+        var s = e.indexOf("?")
+          , o = -1 !== s && s < e.indexOf("#") ? "?" : "#"
+          , l = e.split(o);
+        l[0] = l[0].replace(/\\/g, "/");
+        var v = e = l.join(o);
+        if (v = v.trim(),
+        !n && 1 === e.split("#").length) {
+            var w = c.exec(v);
+            if (w)
+                return this.path = v,
+                this.href = v,
+                this.pathname = w[1],
+                w[2] ? (this.search = w[2],
+                this.query = t ? k.parse(this.search.substr(1)) : this.search.substr(1)) : t && (this.search = "",
+                this.query = {}),
+                this
+        }
+        var b = a.exec(v);
+        if (b) {
+            var x = (b = b[0]).toLowerCase();
+            this.protocol = x,
+            v = v.substr(b.length)
+        }
+        if (n || b || v.match(/^\/\/[^@\/]+@[^@\/]+/)) {
+            var S = "//" === v.substr(0, 2);
+            !S || b && m[b] || (v = v.substr(2),
+            this.slashes = !0)
+        }
+        if (!m[b] && (S || b && !y[b])) {
+            for (var T, I, E = -1, M = 0; M < f.length; M++)
+                -1 !== (A = v.indexOf(f[M])) && (-1 === E || A < E) && (E = A);
+            for (-1 !== (I = -1 === E ? v.lastIndexOf("@") : v.lastIndexOf("@", E)) && (T = v.slice(0, I),
+            v = v.slice(I + 1),
+            this.auth = decodeURIComponent(T)),
+            E = -1,
+            M = 0; M < u.length; M++) {
+                var A;
+                -1 !== (A = v.indexOf(u[M])) && (-1 === E || A < E) && (E = A)
+            }
+            -1 === E && (E = v.length),
+            this.host = v.slice(0, E),
+            v = v.slice(E),
+            this.parseHost(),
+            this.hostname = this.hostname || "";
+            var P = "[" === this.hostname[0] && "]" === this.hostname[this.hostname.length - 1];
+            if (!P)
+                for (var B = this.hostname.split(/\./), C = (M = 0,
+                B.length); M < C; M++) {
+                    var R = B[M];
+                    if (R && !R.match(d)) {
+                        for (var O = "", j = 0, _ = R.length; j < _; j++)
+                            R.charCodeAt(j) > 127 ? O += "x" : O += R[j];
+                        if (!O.match(d)) {
+                            var D = B.slice(0, M)
+                              , U = B.slice(M + 1)
+                              , L = R.match(p);
+                            L && (D.push(L[1]),
+                            U.unshift(L[2])),
+                            U.length && (v = "/" + U.join(".") + v),
+                            this.hostname = D.join(".");
+                            break
+                        }
+                    }
+                }
+            this.hostname.length > 255 ? this.hostname = "" : this.hostname = this.hostname.toLowerCase(),
+            P || (this.hostname = i.toASCII(this.hostname));
+            var F = this.port ? ":" + this.port : ""
+              , z = this.hostname || "";
+            this.host = z + F,
+            this.href += this.host,
+            P && (this.hostname = this.hostname.substr(1, this.hostname.length - 2),
+            "/" !== v[0] && (v = "/" + v))
+        }
+        if (!g[x])
+            for (M = 0,
+            C = h.length; M < C; M++) {
+                var H = h[M];
+                if (-1 !== v.indexOf(H)) {
+                    var V = encodeURIComponent(H);
+                    V === H && (V = escape(H)),
+                    v = v.split(H).join(V)
+                }
+            }
+        var Y = v.indexOf("#");
+        -1 !== Y && (this.hash = v.substr(Y),
+        v = v.slice(0, Y));
+        var q = v.indexOf("?");
+        if (-1 !== q ? (this.search = v.substr(q),
+        this.query = v.substr(q + 1),
+        t && (this.query = k.parse(this.query)),
+        v = v.slice(0, q)) : t && (this.search = "",
+        this.query = {}),
+        v && (this.pathname = v),
+        y[x] && this.hostname && !this.pathname && (this.pathname = "/"),
+        this.pathname || this.search) {
+            F = this.pathname || "";
+            var W = this.search || "";
+            this.path = F + W
+        }
+        return this.href = this.format(),
+        this
+    }
+    ,
+    s.prototype.format = function() {
+        var e = this.auth || "";
+        e && (e = (e = encodeURIComponent(e)).replace(/%3A/i, ":"),
+        e += "@");
+        var t = this.protocol || ""
+          , n = this.pathname || ""
+          , i = this.hash || ""
+          , s = !1
+          , a = "";
+        this.host ? s = e + this.host : this.hostname && (s = e + (-1 === this.hostname.indexOf(":") ? this.hostname : "[" + this.hostname + "]"),
+        this.port && (s += ":" + this.port)),
+        this.query && r.isObject(this.query) && Object.keys(this.query).length && (a = k.stringify(this.query));
+        var o = this.search || a && "?" + a || "";
+        return t && ":" !== t.substr(-1) && (t += ":"),
+        this.slashes || (!t || y[t]) && !1 !== s ? (s = "//" + (s || ""),
+        n && "/" !== n.charAt(0) && (n = "/" + n)) : s || (s = ""),
+        i && "#" !== i.charAt(0) && (i = "#" + i),
+        o && "?" !== o.charAt(0) && (o = "?" + o),
+        t + s + (n = n.replace(/[?#]/g, (function(e) {
+            return encodeURIComponent(e)
+        }
+        ))) + (o = o.replace("#", "%23")) + i
+    }
+    ,
+    s.prototype.resolve = function(e) {
+        return this.resolveObject(v(e, !1, !0)).format()
+    }
+    ,
+    s.prototype.resolveObject = function(e) {
+        if (r.isString(e)) {
+            var t = new s;
+            t.parse(e, !1, !0),
+            e = t
+        }
+        for (var n = new s, i = Object.keys(this), a = 0; a < i.length; a++) {
+            var o = i[a];
+            n[o] = this[o]
+        }
+        if (n.hash = e.hash,
+        "" === e.href)
+            return n.href = n.format(),
+            n;
+        if (e.slashes && !e.protocol) {
+            for (var c = Object.keys(e), l = 0; l < c.length; l++) {
+                var h = c[l];
+                "protocol" !== h && (n[h] = e[h])
+            }
+            return y[n.protocol] && n.hostname && !n.pathname && (n.path = n.pathname = "/"),
+            n.href = n.format(),
+            n
+        }
+        if (e.protocol && e.protocol !== n.protocol) {
+            if (!y[e.protocol]) {
+                for (var u = Object.keys(e), f = 0; f < u.length; f++) {
+                    var d = u[f];
+                    n[d] = e[d]
+                }
+                return n.href = n.format(),
+                n
+            }
+            if (n.protocol = e.protocol,
+            e.host || m[e.protocol])
+                n.pathname = e.pathname;
+            else {
+                for (var p = (e.pathname || "").split("/"); p.length && !(e.host = p.shift()); )
+                    ;
+                e.host || (e.host = ""),
+                e.hostname || (e.hostname = ""),
+                "" !== p[0] && p.unshift(""),
+                p.length < 2 && p.unshift(""),
+                n.pathname = p.join("/")
+            }
+            if (n.search = e.search,
+            n.query = e.query,
+            n.host = e.host || "",
+            n.auth = e.auth,
+            n.hostname = e.hostname || e.host,
+            n.port = e.port,
+            n.pathname || n.search) {
+                var g = n.pathname || ""
+                  , k = n.search || "";
+                n.path = g + k
+            }
+            return n.slashes = n.slashes || e.slashes,
+            n.href = n.format(),
+            n
+        }
+        var v = n.pathname && "/" === n.pathname.charAt(0)
+          , w = e.host || e.pathname && "/" === e.pathname.charAt(0)
+          , b = w || v || n.host && e.pathname
+          , x = b
+          , S = n.pathname && n.pathname.split("/") || []
+          , T = (p = e.pathname && e.pathname.split("/") || [],
+        n.protocol && !y[n.protocol]);
+        if (T && (n.hostname = "",
+        n.port = null,
+        n.host && ("" === S[0] ? S[0] = n.host : S.unshift(n.host)),
+        n.host = "",
+        e.protocol && (e.hostname = null,
+        e.port = null,
+        e.host && ("" === p[0] ? p[0] = e.host : p.unshift(e.host)),
+        e.host = null),
+        b = b && ("" === p[0] || "" === S[0])),
+        w)
+            n.host = e.host || "" === e.host ? e.host : n.host,
+            n.hostname = e.hostname || "" === e.hostname ? e.hostname : n.hostname,
+            n.search = e.search,
+            n.query = e.query,
+            S = p;
+        else if (p.length)
+            S || (S = []),
+            S.pop(),
+            S = S.concat(p),
+            n.search = e.search,
+            n.query = e.query;
+        else if (!r.isNullOrUndefined(e.search))
+            return T && (n.hostname = n.host = S.shift(),
+            (P = !!(n.host && n.host.indexOf("@") > 0) && n.host.split("@")) && (n.auth = P.shift(),
+            n.host = n.hostname = P.shift())),
+            n.search = e.search,
+            n.query = e.query,
+            r.isNull(n.pathname) && r.isNull(n.search) || (n.path = (n.pathname ? n.pathname : "") + (n.search ? n.search : "")),
+            n.href = n.format(),
+            n;
+        if (!S.length)
+            return n.pathname = null,
+            n.search ? n.path = "/" + n.search : n.path = null,
+            n.href = n.format(),
+            n;
+        for (var I = S.slice(-1)[0], E = (n.host || e.host || S.length > 1) && ("." === I || ".." === I) || "" === I, M = 0, A = S.length; A >= 0; A--)
+            "." === (I = S[A]) ? S.splice(A, 1) : ".." === I ? (S.splice(A, 1),
+            M++) : M && (S.splice(A, 1),
+            M--);
+        if (!b && !x)
+            for (; M--; M)
+                S.unshift("..");
+        !b || "" === S[0] || S[0] && "/" === S[0].charAt(0) || S.unshift(""),
+        E && "/" !== S.join("/").substr(-1) && S.push("");
+        var P, B = "" === S[0] || S[0] && "/" === S[0].charAt(0);
+        return T && (n.hostname = n.host = B ? "" : S.length ? S.shift() : "",
+        (P = !!(n.host && n.host.indexOf("@") > 0) && n.host.split("@")) && (n.auth = P.shift(),
+        n.host = n.hostname = P.shift())),
+        (b = b || n.host && S.length) && !B && S.unshift(""),
+        S.length ? n.pathname = S.join("/") : (n.pathname = null,
+        n.path = null),
+        r.isNull(n.pathname) && r.isNull(n.search) || (n.path = (n.pathname ? n.pathname : "") + (n.search ? n.search : "")),
+        n.auth = e.auth || n.auth,
+        n.slashes = n.slashes || e.slashes,
+        n.href = n.format(),
+        n
+    }
+    ,
+    s.prototype.parseHost = function() {
+        var e = this.host
+          , t = o.exec(e);
+        t && (":" !== (t = t[0]) && (this.port = t.substr(1)),
+        e = e.substr(0, e.length - t.length)),
+        e && (this.hostname = e)
+    }
+}
+, function(e, t, n) {
+    (function(e, i) {
+        var r;
+        /*! https://mths.be/punycode v1.4.1 by @mathias */
+        !function(s) {
+            t && t.nodeType,
+            e && e.nodeType;
+            var a = "object" == typeof i && i;
+            a.global !== a && a.window !== a && a.self;
+            var o, c = 2147483647, l = 36, h = /^xn--/, u = /[^\x20-\x7E]/, f = /[\x2E\u3002\uFF0E\uFF61]/g, d = {
+                overflow: "Overflow: input needs wider integers to process",
+                "not-basic": "Illegal input >= 0x80 (not a basic code point)",
+                "invalid-input": "Invalid input"
+            }, p = Math.floor, g = String.fromCharCode;
+            function m(e) {
+                throw new RangeError(d[e])
+            }
+            function y(e, t) {
+                for (var n = e.length, i = []; n--; )
+                    i[n] = t(e[n]);
+                return i
+            }
+            function k(e, t) {
+                var n = e.split("@")
+                  , i = "";
+                return n.length > 1 && (i = n[0] + "@",
+                e = n[1]),
+                i + y((e = e.replace(f, ".")).split("."), t).join(".")
+            }
+            function v(e) {
+                for (var t, n, i = [], r = 0, s = e.length; r < s; )
+                    (t = e.charCodeAt(r++)) >= 55296 && t <= 56319 && r < s ? 56320 == (64512 & (n = e.charCodeAt(r++))) ? i.push(((1023 & t) << 10) + (1023 & n) + 65536) : (i.push(t),
+                    r--) : i.push(t);
+                return i
+            }
+            function w(e) {
+                return y(e, (function(e) {
+                    var t = "";
+                    return e > 65535 && (t += g((e -= 65536) >>> 10 & 1023 | 55296),
+                    e = 56320 | 1023 & e),
+                    t + g(e)
+                }
+                )).join("")
+            }
+            function b(e) {
+                return e - 48 < 10 ? e - 22 : e - 65 < 26 ? e - 65 : e - 97 < 26 ? e - 97 : l
+            }
+            function x(e, t) {
+                return e + 22 + 75 * (e < 26) - ((0 != t) << 5)
+            }
+            function S(e, t, n) {
+                var i = 0;
+                for (e = n ? p(e / 700) : e >> 1,
+                e += p(e / t); e > 455; i += l)
+                    e = p(e / 35);
+                return p(i + 36 * e / (e + 38))
+            }
+            function T(e) {
+                var t, n, i, r, s, a, o, h, u, f, d = [], g = e.length, y = 0, k = 128, v = 72;
+                for ((n = e.lastIndexOf("-")) < 0 && (n = 0),
+                i = 0; i < n; ++i)
+                    e.charCodeAt(i) >= 128 && m("not-basic"),
+                    d.push(e.charCodeAt(i));
+                for (r = n > 0 ? n + 1 : 0; r < g; ) {
+                    for (s = y,
+                    a = 1,
+                    o = l; r >= g && m("invalid-input"),
+                    ((h = b(e.charCodeAt(r++))) >= l || h > p((c - y) / a)) && m("overflow"),
+                    y += h * a,
+                    !(h < (u = o <= v ? 1 : o >= v + 26 ? 26 : o - v)); o += l)
+                        a > p(c / (f = l - u)) && m("overflow"),
+                        a *= f;
+                    v = S(y - s, t = d.length + 1, 0 == s),
+                    p(y / t) > c - k && m("overflow"),
+                    k += p(y / t),
+                    y %= t,
+                    d.splice(y++, 0, k)
+                }
+                return w(d)
+            }
+            function I(e) {
+                var t, n, i, r, s, a, o, h, u, f, d, y, k, w, b, T = [];
+                for (y = (e = v(e)).length,
+                t = 128,
+                n = 0,
+                s = 72,
+                a = 0; a < y; ++a)
+                    (d = e[a]) < 128 && T.push(g(d));
+                for (i = r = T.length,
+                r && T.push("-"); i < y; ) {
+                    for (o = c,
+                    a = 0; a < y; ++a)
+                        (d = e[a]) >= t && d < o && (o = d);
+                    for (o - t > p((c - n) / (k = i + 1)) && m("overflow"),
+                    n += (o - t) * k,
+                    t = o,
+                    a = 0; a < y; ++a)
+                        if ((d = e[a]) < t && ++n > c && m("overflow"),
+                        d == t) {
+                            for (h = n,
+                            u = l; !(h < (f = u <= s ? 1 : u >= s + 26 ? 26 : u - s)); u += l)
+                                b = h - f,
+                                w = l - f,
+                                T.push(g(x(f + b % w, 0))),
+                                h = p(b / w);
+                            T.push(g(x(h, 0))),
+                            s = S(n, k, i == r),
+                            n = 0,
+                            ++i
+                        }
+                    ++n,
+                    ++t
+                }
+                return T.join("")
+            }
+            o = {
+                version: "1.4.1",
+                ucs2: {
+                    decode: v,
+                    encode: w
+                },
+                decode: T,
+                encode: I,
+                toASCII: function(e) {
+                    return k(e, (function(e) {
+                        return u.test(e) ? "xn--" + I(e) : e
+                    }
+                    ))
+                },
+                toUnicode: function(e) {
+                    return k(e, (function(e) {
+                        return h.test(e) ? T(e.slice(4).toLowerCase()) : e
+                    }
+                    ))
+                }
+            },
+            void 0 === (r = function() {
+                return o
+            }
+            .call(t, n, t, e)) || (e.exports = r)
+        }()
+    }
+    ).call(this, n(61)(e), n(1))
+}
+, function(e, t) {
+    e.exports = function(e) {
+        return e.webpackPolyfill || (e.deprecate = function() {}
+        ,
+        e.paths = [],
+        e.children || (e.children = []),
+        Object.defineProperty(e, "loaded", {
+            enumerable: !0,
+            get: function() {
+                return e.l
+            }
+        }),
+        Object.defineProperty(e, "id", {
+            enumerable: !0,
+            get: function() {
+                return e.i
+            }
+        }),
+        e.webpackPolyfill = 1),
+        e
+    }
+}
+, function(e, t, n) {
+    "use strict";
+    e.exports = {
+        isString: function(e) {
+            return "string" == typeof e
+        },
+        isObject: function(e) {
+            return "object" == typeof e && null !== e
+        },
+        isNull: function(e) {
+            return null === e
+        },
+        isNullOrUndefined: function(e) {
+            return null == e
+        }
+    }
+}
+, function(e, t, n) {
+    "use strict";
+    t.decode = t.parse = n(64),
+    t.encode = t.stringify = n(65)
+}
+, function(e, t, n) {
+    "use strict";
+    function i(e, t) {
+        return Object.prototype.hasOwnProperty.call(e, t)
+    }
+    e.exports = function(e, t, n, s) {
+        t = t || "&",
+        n = n || "=";
+        var a = {};
+        if ("string" != typeof e || 0 === e.length)
+            return a;
+        var o = /\+/g;
+        e = e.split(t);
+        var c = 1e3;
+        s && "number" == typeof s.maxKeys && (c = s.maxKeys);
+        var l = e.length;
+        c > 0 && l > c && (l = c);
+        for (var h = 0; h < l; ++h) {
+            var u, f, d, p, g = e[h].replace(o, "%20"), m = g.indexOf(n);
+            m >= 0 ? (u = g.substr(0, m),
+            f = g.substr(m + 1)) : (u = g,
+            f = ""),
+            d = decodeURIComponent(u),
+            p = decodeURIComponent(f),
+            i(a, d) ? r(a[d]) ? a[d].push(p) : a[d] = [a[d], p] : a[d] = p
+        }
+        return a
+    }
+    ;
+    var r = Array.isArray || function(e) {
+        return "[object Array]" === Object.prototype.toString.call(e)
+    }
+}
+, function(e, t, n) {
+    "use strict";
+    var i = function(e) {
+        switch (typeof e) {
+        case "string":
+            return e;
+        case "boolean":
+            return e ? "true" : "false";
+        case "number":
+            return isFinite(e) ? e : "";
+        default:
+            return ""
+        }
+    };
+    e.exports = function(e, t, n, o) {
+        return t = t || "&",
+        n = n || "=",
+        null === e && (e = void 0),
+        "object" == typeof e ? s(a(e), (function(a) {
+            var o = encodeURIComponent(i(a)) + n;
+            return r(e[a]) ? s(e[a], (function(e) {
+                return o + encodeURIComponent(i(e))
+            }
+            )).join(t) : o + encodeURIComponent(i(e[a]))
+        }
+        )).join(t) : o ? encodeURIComponent(i(o)) + n + encodeURIComponent(i(e)) : ""
+    }
+    ;
+    var r = Array.isArray || function(e) {
+        return "[object Array]" === Object.prototype.toString.call(e)
+    }
+    ;
+    function s(e, t) {
+        if (e.map)
+            return e.map(t);
+        for (var n = [], i = 0; i < e.length; i++)
+            n.push(t(e[i], i));
+        return n
+    }
+    var a = Object.keys || function(e) {
+        var t = [];
+        for (var n in e)
+            Object.prototype.hasOwnProperty.call(e, n) && t.push(n);
+        return t
+    }
+}
+, function(e, t, n) {
+    !function() {
+        var t = n(67)
+          , i = n(20).utf8
+          , r = n(68)
+          , s = n(20).bin
+          , a = function(e, n) {
+            e.constructor == String ? e = n && "binary" === n.encoding ? s.stringToBytes(e) : i.stringToBytes(e) : r(e) ? e = Array.prototype.slice.call(e, 0) : Array.isArray(e) || e.constructor === Uint8Array || (e = e.toString());
+            for (var o = t.bytesToWords(e), c = 8 * e.length, l = 1732584193, h = -271733879, u = -1732584194, f = 271733878, d = 0; d < o.length; d++)
+                o[d] = 16711935 & (o[d] << 8 | o[d] >>> 24) | 4278255360 & (o[d] << 24 | o[d] >>> 8);
+            o[c >>> 5] |= 128 << c % 32,
+            o[14 + (c + 64 >>> 9 << 4)] = c;
+            var p = a._ff
+              , g = a._gg
+              , m = a._hh
+              , y = a._ii;
+            for (d = 0; d < o.length; d += 16) {
+                var k = l
+                  , v = h
+                  , w = u
+                  , b = f;
+                h = y(h = y(h = y(h = y(h = m(h = m(h = m(h = m(h = g(h = g(h = g(h = g(h = p(h = p(h = p(h = p(h, u = p(u, f = p(f, l = p(l, h, u, f, o[d + 0], 7, -680876936), h, u, o[d + 1], 12, -389564586), l, h, o[d + 2], 17, 606105819), f, l, o[d + 3], 22, -1044525330), u = p(u, f = p(f, l = p(l, h, u, f, o[d + 4], 7, -176418897), h, u, o[d + 5], 12, 1200080426), l, h, o[d + 6], 17, -1473231341), f, l, o[d + 7], 22, -45705983), u = p(u, f = p(f, l = p(l, h, u, f, o[d + 8], 7, 1770035416), h, u, o[d + 9], 12, -1958414417), l, h, o[d + 10], 17, -42063), f, l, o[d + 11], 22, -1990404162), u = p(u, f = p(f, l = p(l, h, u, f, o[d + 12], 7, 1804603682), h, u, o[d + 13], 12, -40341101), l, h, o[d + 14], 17, -1502002290), f, l, o[d + 15], 22, 1236535329), u = g(u, f = g(f, l = g(l, h, u, f, o[d + 1], 5, -165796510), h, u, o[d + 6], 9, -1069501632), l, h, o[d + 11], 14, 643717713), f, l, o[d + 0], 20, -373897302), u = g(u, f = g(f, l = g(l, h, u, f, o[d + 5], 5, -701558691), h, u, o[d + 10], 9, 38016083), l, h, o[d + 15], 14, -660478335), f, l, o[d + 4], 20, -405537848), u = g(u, f = g(f, l = g(l, h, u, f, o[d + 9], 5, 568446438), h, u, o[d + 14], 9, -1019803690), l, h, o[d + 3], 14, -187363961), f, l, o[d + 8], 20, 1163531501), u = g(u, f = g(f, l = g(l, h, u, f, o[d + 13], 5, -1444681467), h, u, o[d + 2], 9, -51403784), l, h, o[d + 7], 14, 1735328473), f, l, o[d + 12], 20, -1926607734), u = m(u, f = m(f, l = m(l, h, u, f, o[d + 5], 4, -378558), h, u, o[d + 8], 11, -2022574463), l, h, o[d + 11], 16, 1839030562), f, l, o[d + 14], 23, -35309556), u = m(u, f = m(f, l = m(l, h, u, f, o[d + 1], 4, -1530992060), h, u, o[d + 4], 11, 1272893353), l, h, o[d + 7], 16, -155497632), f, l, o[d + 10], 23, -1094730640), u = m(u, f = m(f, l = m(l, h, u, f, o[d + 13], 4, 681279174), h, u, o[d + 0], 11, -358537222), l, h, o[d + 3], 16, -722521979), f, l, o[d + 6], 23, 76029189), u = m(u, f = m(f, l = m(l, h, u, f, o[d + 9], 4, -640364487), h, u, o[d + 12], 11, -421815835), l, h, o[d + 15], 16, 530742520), f, l, o[d + 2], 23, -995338651), u = y(u, f = y(f, l = y(l, h, u, f, o[d + 0], 6, -198630844), h, u, o[d + 7], 10, 1126891415), l, h, o[d + 14], 15, -1416354905), f, l, o[d + 5], 21, -57434055), u = y(u, f = y(f, l = y(l, h, u, f, o[d + 12], 6, 1700485571), h, u, o[d + 3], 10, -1894986606), l, h, o[d + 10], 15, -1051523), f, l, o[d + 1], 21, -2054922799), u = y(u, f = y(f, l = y(l, h, u, f, o[d + 8], 6, 1873313359), h, u, o[d + 15], 10, -30611744), l, h, o[d + 6], 15, -1560198380), f, l, o[d + 13], 21, 1309151649), u = y(u, f = y(f, l = y(l, h, u, f, o[d + 4], 6, -145523070), h, u, o[d + 11], 10, -1120210379), l, h, o[d + 2], 15, 718787259), f, l, o[d + 9], 21, -343485551),
+                l = l + k >>> 0,
+                h = h + v >>> 0,
+                u = u + w >>> 0,
+                f = f + b >>> 0
+            }
+            return t.endian([l, h, u, f])
+        };
+        a._ff = function(e, t, n, i, r, s, a) {
+            var o = e + (t & n | ~t & i) + (r >>> 0) + a;
+            return (o << s | o >>> 32 - s) + t
+        }
+        ,
+        a._gg = function(e, t, n, i, r, s, a) {
+            var o = e + (t & i | n & ~i) + (r >>> 0) + a;
+            return (o << s | o >>> 32 - s) + t
+        }
+        ,
+        a._hh = function(e, t, n, i, r, s, a) {
+            var o = e + (t ^ n ^ i) + (r >>> 0) + a;
+            return (o << s | o >>> 32 - s) + t
+        }
+        ,
+        a._ii = function(e, t, n, i, r, s, a) {
+            var o = e + (n ^ (t | ~i)) + (r >>> 0) + a;
+            return (o << s | o >>> 32 - s) + t
+        }
+        ,
+        a._blocksize = 16,
+        a._digestsize = 16,
+        e.exports = function(e, n) {
+            if (null == e)
+                throw new Error("Illegal argument " + e);
+            var i = t.wordsToBytes(a(e, n));
+            return n && n.asBytes ? i : n && n.asString ? s.bytesToString(i) : t.bytesToHex(i)
+        }
+    }()
+}
+, function(e, t) {
+    !function() {
+        var t = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+          , n = {
+            rotl: function(e, t) {
+                return e << t | e >>> 32 - t
+            },
+            rotr: function(e, t) {
+                return e << 32 - t | e >>> t
+            },
+            endian: function(e) {
+                if (e.constructor == Number)
+                    return 16711935 & n.rotl(e, 8) | 4278255360 & n.rotl(e, 24);
+                for (var t = 0; t < e.length; t++)
+                    e[t] = n.endian(e[t]);
+                return e
+            },
+            randomBytes: function(e) {
+                for (var t = []; e > 0; e--)
+                    t.push(Math.floor(256 * Math.random()));
+                return t
+            },
+            bytesToWords: function(e) {
+                for (var t = [], n = 0, i = 0; n < e.length; n++,
+                i += 8)
+                    t[i >>> 5] |= e[n] << 24 - i % 32;
+                return t
+            },
+            wordsToBytes: function(e) {
+                for (var t = [], n = 0; n < 32 * e.length; n += 8)
+                    t.push(e[n >>> 5] >>> 24 - n % 32 & 255);
+                return t
+            },
+            bytesToHex: function(e) {
+                for (var t = [], n = 0; n < e.length; n++)
+                    t.push((e[n] >>> 4).toString(16)),
+                    t.push((15 & e[n]).toString(16));
+                return t.join("")
+            },
+            hexToBytes: function(e) {
+                for (var t = [], n = 0; n < e.length; n += 2)
+                    t.push(parseInt(e.substr(n, 2), 16));
+                return t
+            },
+            bytesToBase64: function(e) {
+                for (var n = [], i = 0; i < e.length; i += 3)
+                    for (var r = e[i] << 16 | e[i + 1] << 8 | e[i + 2], s = 0; s < 4; s++)
+                        8 * i + 6 * s <= 8 * e.length ? n.push(t.charAt(r >>> 6 * (3 - s) & 63)) : n.push("=");
+                return n.join("")
+            },
+            base64ToBytes: function(e) {
+                e = e.replace(/[^A-Z0-9+\/]/gi, "");
+                for (var n = [], i = 0, r = 0; i < e.length; r = ++i % 4)
+                    0 != r && n.push((t.indexOf(e.charAt(i - 1)) & Math.pow(2, -2 * r + 8) - 1) << 2 * r | t.indexOf(e.charAt(i)) >>> 6 - 2 * r);
+                return n
+            }
+        };
+        e.exports = n
+    }()
+}
+, function(e, t) {
+    function n(e) {
+        return !!e.constructor && "function" == typeof e.constructor.isBuffer && e.constructor.isBuffer(e)
+    }
+    /*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+    e.exports = function(e) {
+        return null != e && (n(e) || function(e) {
+            return "function" == typeof e.readFloatLE && "function" == typeof e.slice && n(e.slice(0, 0))
+        }(e) || !!e._isBuffer)
+    }
+}
+, function(e, t) {
+    e.exports = function(e, t, n, i, r, s, a, o, c) {
+        this.aiTypes = [{
+            id: 0,
+            src: "cow_1",
+            killScore: 150,
+            health: 500,
+            weightM: .8,
+            speed: 95e-5,
+            turnSpeed: .001,
+            scale: 72,
+            drop: ["food", 50]
+        }, {
+            id: 1,
+            src: "pig_1",
+            killScore: 200,
+            health: 800,
+            weightM: .6,
+            speed: 85e-5,
+            turnSpeed: .001,
+            scale: 72,
+            drop: ["food", 80]
+        }, {
+            id: 2,
+            name: "Bull",
+            src: "bull_2",
+            hostile: !0,
+            dmg: 20,
+            killScore: 1e3,
+            health: 1800,
+            weightM: .5,
+            speed: 94e-5,
+            turnSpeed: 74e-5,
+            scale: 78,
+            viewRange: 800,
+            chargePlayer: !0,
+            drop: ["food", 100]
+        }, {
+            id: 3,
+            name: "Bully",
+            src: "bull_1",
+            hostile: !0,
+            dmg: 20,
+            killScore: 2e3,
+            health: 2800,
+            weightM: .45,
+            speed: .001,
+            turnSpeed: 8e-4,
+            scale: 90,
+            viewRange: 900,
+            chargePlayer: !0,
+            drop: ["food", 400]
+        }, {
+            id: 4,
+            name: "Wolf",
+            src: "wolf_1",
+            hostile: !0,
+            dmg: 8,
+            killScore: 500,
+            health: 300,
+            weightM: .45,
+            speed: .001,
+            turnSpeed: .002,
+            scale: 84,
+            viewRange: 800,
+            chargePlayer: !0,
+            drop: ["food", 200]
+        }, {
+            id: 5,
+            name: "Quack",
+            src: "chicken_1",
+            dmg: 8,
+            killScore: 2e3,
+            noTrap: !0,
+            health: 300,
+            weightM: .2,
+            speed: .0018,
+            turnSpeed: .006,
+            scale: 70,
+            drop: ["food", 100]
+        }, {
+            id: 6,
+            name: "MOOSTAFA",
+            nameScale: 50,
+            src: "enemy",
+            hostile: !0,
+            dontRun: !0,
+            fixedSpawn: !0,
+            spawnDelay: 6e4,
+            noTrap: !0,
+            colDmg: 100,
+            dmg: 40,
+            killScore: 8e3,
+            health: 18e3,
+            weightM: .4,
+            speed: 7e-4,
+            turnSpeed: .01,
+            scale: 80,
+            spriteMlt: 1.8,
+            leapForce: .9,
+            viewRange: 1e3,
+            hitRange: 210,
+            hitDelay: 1e3,
+            chargePlayer: !0,
+            drop: ["food", 100]
+        }, {
+            id: 7,
+            name: "Treasure",
+            hostile: !0,
+            nameScale: 35,
+            src: "crate_1",
+            fixedSpawn: !0,
+            spawnDelay: 12e4,
+            colDmg: 200,
+            killScore: 5e3,
+            health: 2e4,
+            weightM: .1,
+            speed: 0,
+            turnSpeed: 0,
+            scale: 70,
+            spriteMlt: 1
+        }, {
+            id: 8,
+            name: "MOOFIE",
+            src: "wolf_2",
+            hostile: !0,
+            fixedSpawn: !0,
+            dontRun: !0,
+            hitScare: 4,
+            spawnDelay: 3e4,
+            noTrap: !0,
+            nameScale: 35,
+            dmg: 10,
+            colDmg: 100,
+            killScore: 3e3,
+            health: 7e3,
+            weightM: .45,
+            speed: .0015,
+            turnSpeed: .002,
+            scale: 90,
+            viewRange: 800,
+            chargePlayer: !0,
+            drop: ["food", 1e3]
+        }],
+        this.spawn = function(l, h, u, f) {
+            for (var d, p = 0; p < e.length; ++p)
+                if (!e[p].active) {
+                    d = e[p];
+                    break
+                }
+            return d || (d = new t(e.length,r,n,i,a,s,o,c),
+            e.push(d)),
+            d.init(l, h, u, f, this.aiTypes[f]),
+            d
+        }
+    }
+}
+, function(e, t, n) {
+    (function(t) {
+        var n = 2 * Math.PI;
+        e.exports = function(e, i, r, s, a, o, c, l) {
+            this.sid = e,
+            this.isAI = !0,
+            this.nameIndex = a.randInt(0, o.cowNames.length - 1),
+            this.init = function(e, t, n, i, r) {
+                this.x = e,
+                this.y = t,
+                this.startX = r.fixedSpawn ? e : null,
+                this.startY = r.fixedSpawn ? t : null,
+                this.xVel = 0,
+                this.yVel = 0,
+                this.zIndex = 0,
+                this.dir = n,
+                this.dirPlus = 0,
+                this.index = i,
+                this.src = r.src,
+                r.name && (this.name = r.name),
+                this.weightM = r.weightM,
+                this.speed = r.speed,
+                this.killScore = r.killScore,
+                this.turnSpeed = r.turnSpeed,
+                this.scale = r.scale,
+                this.maxHealth = r.health,
+                this.leapForce = r.leapForce,
+                this.health = this.maxHealth,
+                this.chargePlayer = r.chargePlayer,
+                this.viewRange = r.viewRange,
+                this.drop = r.drop,
+                this.dmg = r.dmg,
+                this.hostile = r.hostile,
+                this.dontRun = r.dontRun,
+                this.hitRange = r.hitRange,
+                this.hitDelay = r.hitDelay,
+                this.hitScare = r.hitScare,
+                this.spriteMlt = r.spriteMlt,
+                this.nameScale = r.nameScale,
+                this.colDmg = r.colDmg,
+                this.noTrap = r.noTrap,
+                this.spawnDelay = r.spawnDelay,
+                this.hitWait = 0,
+                this.waitCount = 1e3,
+                this.moveCount = 0,
+                this.targetDir = 0,
+                this.active = !0,
+                this.alive = !0,
+                this.runFrom = null,
+                this.chargeTarget = null,
+                this.dmgOverTime = {}
+            }
+            ;
+            var h = 0;
+            this.update = function(e) {
+                if (this.active) {
+                    if (this.spawnCounter)
+                        return this.spawnCounter -= e * (1 + (t.DARKNESS > 0 ? o.MAX_SPAWN_DELAY : 0)),
+                        void (this.spawnCounter <= 0 && (this.spawnCounter = 0,
+                        this.x = this.startX || a.randInt(0, o.mapScale),
+                        this.y = this.startY || a.randInt(0, o.mapScale)));
+                    (h -= e) <= 0 && (this.dmgOverTime.dmg && (this.changeHealth(-this.dmgOverTime.dmg, this.dmgOverTime.doer),
+                    this.dmgOverTime.time -= 1,
+                    this.dmgOverTime.time <= 0 && (this.dmgOverTime.dmg = 0)),
+                    h = 1e3);
+                    var s = !1
+                      , c = 1;
+                    if (!this.zIndex && !this.lockMove && this.y >= o.mapScale / 2 - o.riverWidth / 2 && this.y <= o.mapScale / 2 + o.riverWidth / 2 && (c = .33,
+                    this.xVel += o.waterCurrent * e),
+                    this.checkForBait(),
+                    this.lockMove)
+                        this.xVel = 0,
+                        this.yVel = 0;
+                    else if (this.waitCount > 0) {
+                        if (this.waitCount -= e,
+                        this.waitCount <= 0)
+                            if (this.chargePlayer && !this.chargeBait) {
+                                for (var u, f, d = 0, p = 0; p < r.length; ++p)
+                                    !r[p].alive || r[p].skin && r[p].skin.bullRepel || (f = a.getDistance(this.x, this.y, r[p].x, r[p].y)) <= (t.DARKNESS > 0 ? 10 * this.viewRange : this.viewRange) && (!u || f < d) && (d = f,
+                                    u = r[p]);
+                                u ? (this.chargeTarget = u,
+                                this.moveCount = a.randInt(8e3, 12e3)) : (this.moveCount = a.randInt(1e3, 2e3),
+                                this.targetDir = a.randFloat(-Math.PI, Math.PI))
+                            } else
+                                this.moveCount = a.randInt(4e3, 1e4),
+                                this.targetDir = a.randFloat(-Math.PI, Math.PI)
+                    } else if (this.moveCount > 0) {
+                        var g = this.speed * c * (1 + o.MAX_SPEED * t.DARKNESS);
+                        if (this.runFrom && this.runFrom.active && (!this.runFrom.isPlayer || this.runFrom.alive) && (this.targetDir = a.getDirection(this.x, this.y, this.runFrom.x, this.runFrom.y),
+                        g *= 1.42),
+                        this.baitTarget && this.baitTarget.health > 0 ? (this.targetDir = a.getDirection(this.baitTarget.x, this.baitTarget.y, this.x, this.y),
+                        g *= 1.75,
+                        this.chargeBait = !0) : this.chargeTarget && this.chargeTarget.alive && (this.targetDir = a.getDirection(this.chargeTarget.x, this.chargeTarget.y, this.x, this.y),
+                        g *= 1.75,
+                        s = !0),
+                        this.hitWait && (g *= .3),
+                        this.dir != this.targetDir) {
+                            this.dir %= n;
+                            var m = (this.dir - this.targetDir + n) % n
+                              , y = Math.min(Math.abs(m - n), m, this.turnSpeed * e * (1 + o.MAX_TURN_SPEED * t.DARKNESS))
+                              , k = m - Math.PI >= 0 ? 1 : -1;
+                            this.dir += k * y + n
+                        }
+                        this.dir %= n,
+                        this.xVel += g * e * Math.cos(this.dir),
+                        this.yVel += g * e * Math.sin(this.dir),
+                        this.moveCount -= e,
+                        this.moveCount <= 0 && (this.runFrom = null,
+                        this.chargeTarget = null,
+                        this.waitCount = this.hostile ? 1500 : a.randInt(1500, 6e3))
+                    }
+                    this.zIndex = 0,
+                    this.lockMove = !1;
+                    var v = a.getDistance(0, 0, this.xVel * e, this.yVel * e)
+                      , w = Math.min(4, Math.max(1, Math.round(v / 40)))
+                      , b = 1 / w;
+                    for (p = 0; p < w; ++p) {
+                        this.xVel && (this.x += this.xVel * e * b),
+                        this.yVel && (this.y += this.yVel * e * b),
+                        E = i.getGridArrays(this.x, this.y, this.scale);
+                        for (var x = 0; x < E.length; ++x)
+                            for (var S = 0; S < E[x].length; ++S)
+                                E[x][S].active && i.checkCollision(this, E[x][S], b)
+                    }
+                    var T = !1;
+                    if (this.hitWait > 0 && (this.hitWait -= e,
+                    this.hitWait <= 0)) {
+                        T = !0,
+                        this.hitWait = 0,
+                        this.leapForce && !a.randInt(0, 2) && (this.xVel += this.leapForce * Math.cos(this.dir),
+                        this.yVel += this.leapForce * Math.sin(this.dir));
+                        for (var I, E = i.getGridArrays(this.x, this.y, this.hitRange), M = 0; M < E.length; ++M)
+                            for (x = 0; x < E[M].length; ++x)
+                                (I = E[M][x]).health && a.getDistance(this.x, this.y, I.x, I.y) < I.scale + this.hitRange && (I.changeHealth(5 * -this.dmg) && ("ban" === I.name && (this.waitCount = 1,
+                                this.chargeBait = this.baitTarget = null),
+                                i.disableObj(I)),
+                                i.hitObj(I, a.getDirection(this.x, this.y, I.x, I.y)));
+                        for (x = 0; x < r.length; ++x)
+                            r[x].canSee(this) && l.send(r[x].id, "aa", this.sid)
+                    }
+                    if (s || T || this.chargeBait) {
+                        let e, n, s;
+                        if (this.baitTarget)
+                            (e = this.baitTarget) && e.health > 0 && "ban" === e.name && (n = a.getDistance(this.x, this.y, e.x, e.y),
+                            this.hitRange ? !this.hitWait && n <= this.hitRange + e.scale && (T ? (s = a.getDirection(e.x, e.y, this.x, this.y),
+                            e.changeHealth(-this.dmg * (1 + o.MAX_ATTACK * t.DARKNESS)) && (i.disableObj(e),
+                            this.waitCount = 1,
+                            this.chargeBait = this.baitTarget = null),
+                            e.xVel += .6 * Math.cos(s),
+                            e.yVel += .6 * Math.sin(s),
+                            this.runFrom = null,
+                            this.waitCount = 3e3,
+                            this.hitWait = a.randInt(0, 2) ? 0 : 600) : this.hitWait = this.hitDelay) : n <= this.scale + e.scale && (s = a.getDirection(e.x, e.y, this.x, this.y),
+                            e.changeHealth(-this.dmg * (1 + o.MAX_ATTACK * t.DARKNESS)) && (i.disableObj(e),
+                            this.waitCount = 1,
+                            this.chargeBait = this.baitTarget = null),
+                            e.xVel += .55 * Math.cos(s),
+                            e.yVel += .55 * Math.sin(s)));
+                        else
+                            for (p = 0; p < r.length; ++p)
+                                (e = r[p]) && e.alive && (n = a.getDistance(this.x, this.y, e.x, e.y),
+                                this.hitRange ? !this.hitWait && n <= this.hitRange + e.scale && (T ? (s = a.getDirection(e.x, e.y, this.x, this.y),
+                                e.changeHealth(-this.dmg * (1 + o.MAX_ATTACK * t.DARKNESS)),
+                                e.xVel += .6 * Math.cos(s),
+                                e.yVel += .6 * Math.sin(s),
+                                this.runFrom = null,
+                                this.chargeTarget = null,
+                                this.waitCount = 3e3,
+                                this.hitWait = a.randInt(0, 2) ? 0 : 600) : this.hitWait = this.hitDelay) : n <= this.scale + e.scale && (s = a.getDirection(e.x, e.y, this.x, this.y),
+                                e.changeHealth(-this.dmg * (1 + o.MAX_ATTACK * t.DARKNESS)),
+                                e.xVel += .55 * Math.cos(s),
+                                e.yVel += .55 * Math.sin(s)))
+                    }
+                    this.xVel && (this.xVel *= Math.pow(o.playerDecel, e)),
+                    this.yVel && (this.yVel *= Math.pow(o.playerDecel, e));
+                    var A = this.scale;
+                    this.x - A < 0 ? (this.x = A,
+                    this.xVel = 0) : this.x + A > o.mapScale && (this.x = o.mapScale - A,
+                    this.xVel = 0),
+                    this.y - A < 0 ? (this.y = A,
+                    this.yVel = 0) : this.y + A > o.mapScale && (this.y = o.mapScale - A,
+                    this.yVel = 0)
+                }
+            }
+            ,
+            this.canSee = function(e) {
+                if (!e)
+                    return !1;
+                if (e.skin && e.skin.invisTimer && e.noMovTimer >= e.skin.invisTimer)
+                    return !1;
+                var t = Math.abs(e.x - this.x) - e.scale
+                  , n = Math.abs(e.y - this.y) - e.scale;
+                return t <= o.maxScreenWidth / 2 * 1.3 && n <= o.maxScreenHeight / 2 * 1.3
+            }
+            ;
+            var u = 0
+              , f = 0;
+            this.animate = function(e) {
+                this.animTime > 0 && (this.animTime -= e,
+                this.animTime <= 0 ? (this.animTime = 0,
+                this.dirPlus = 0,
+                u = 0,
+                f = 0) : 0 == f ? (u += e / (this.animSpeed * o.hitReturnRatio),
+                this.dirPlus = a.lerp(0, this.targetAngle, Math.min(1, u)),
+                u >= 1 && (u = 1,
+                f = 1)) : (u -= e / (this.animSpeed * (1 - o.hitReturnRatio)),
+                this.dirPlus = a.lerp(0, this.targetAngle, Math.max(0, u))))
+            }
+            ,
+            this.checkForBait = function() {
+                if (this.hostile && !this.baitTarget) {
+                    let e;
+                    const n = 500 * (1 + 4 * t.DARKNESS)
+                      , r = i.getGridArrays(this.x, this.y, n);
+                    for (let t = 0; t < r.length; ++t)
+                        for (let i = 0; i < r[t].length; ++i) {
+                            const s = r[t][i];
+                            if (s.health && s.health > 0 && "ban" === s.name && (e = a.getDistance(this.x, this.y, s.x, s.y)) < n) {
+                                this.chargeTarget = null,
+                                this.chargeBait = !0,
+                                this.baitTarget = s,
+                                this.waitCount = 0,
+                                this.moveCount = a.randInt(8e3, 12e3);
+                                break
+                            }
+                        }
+                }
+            }
+            ,
+            this.startAnim = function() {
+                this.animTime = this.animSpeed = 600,
+                this.targetAngle = .8 * Math.PI,
+                u = 0,
+                f = 0
+            }
+            ,
+            this.changeHealth = function(e, t, n) {
+                if (this.active && (this.health += e,
+                n && (this.hitScare && !a.randInt(0, this.hitScare) ? (this.runFrom = n,
+                this.waitCount = 0,
+                this.moveCount = 2e3) : this.hostile && this.chargePlayer && n.isPlayer ? (this.chargeTarget = n,
+                this.waitCount = 0,
+                this.moveCount = 8e3) : this.dontRun || (this.runFrom = n,
+                this.waitCount = 0,
+                this.moveCount = 2e3)),
+                e < 0 && this.hitRange && a.randInt(0, 1) && (this.hitWait = 500),
+                t && t.canSee(this) && e < 0 && l.send(t.id, "t", Math.round(this.x), Math.round(this.y), Math.round(-e), 1),
+                this.health <= 0 && (this.spawnDelay ? (this.spawnCounter = this.spawnDelay,
+                this.x = -1e6,
+                this.y = -1e6) : (this.x = this.startX || a.randInt(0, o.mapScale),
+                this.y = this.startY || a.randInt(0, o.mapScale)),
+                this.health = this.maxHealth,
+                this.runFrom = null,
+                t && (c(t, this.killScore),
+                this.drop))))
+                    for (var i = 0; i < this.drop.length; )
+                        t.addResource(o.resourceTypes.indexOf(this.drop[i]), this.drop[i + 1]),
+                        i += 2
+            }
+        }
+    }
+    ).call(this, n(1))
+}
+]);
+//LOOL
+(function() {
+
+	'use strict';
+    var myVar;
+    var myVar2;
+	var police = true;
+	var ID_BummleHat = 8;
+    var ID_EMPTY = 0;
+	var ID_WinterCap = 15;
+
+	document.addEventListener('keydown', function (e) {
+		if (e.keyCode == 36) {
+			e.preventDefault();
+			if (police) {
+            storeEquip(ID_BummleHat);
+            myVar = setTimeout(function(){ h1(); }, 500);
+			} else {
+            clearTimeout(myVar);
+            clearTimeout(myVar2);
+            storeEquip(ID_EMPTY);
+			}
+			police = !police;
+		}
+	});
+
+    function h1() {
+    storeEquip(ID_WinterCap);
+    clearTimeout(myVar);
+    myVar2 = setTimeout(function(){ h2(); }, 500);
+    }
+    function h2() {
+    storeEquip(ID_BummleHat);
+    clearTimeout(myVar2);
+    myVar = setTimeout(function(){ h1(); }, 500);
+    }
+})();
+
+(function() {
+	'use strict';
+
+	var ID_BummleHat = 8;
+	var ID_StrawHat = 2;
+	var ID_WinterCap = 15;
+	var ID_CowboyHat = 5;
+	var ID_RangerHat = 4;
+	var ID_ExplorerHat = 18;
+	var ID_MarksmanCap = 1;
+	var ID_SoldierHelmet = 6;
+	var ID_HoneycrispHat = 13;
+	var ID_MinersHelmet = 9;
+	var ID_BoosterHat = 12;
+	var ID_BushGear = 10;
+	var ID_SpikeGear = 11;
+	var ID_BushidoArmor = 16;
+	var ID_SamuraiArmor = 20;
+
+	document.addEventListener('keydown', function(e) {
+		switch (e.keyCode - 96) {
+			case 0: storeEquip(0); break; // UnEquip
+			case 1: storeEquip(ID_BummleHat); break;
+			case 2: storeEquip(ID_WinterCap); break;
+			case 3: storeEquip(ID_SoldierHelmet); break;
+			case 4: storeEquip(ID_HoneycrispHat); break;
+			case 5: storeEquip(ID_BoosterHat); break;
+			case 6: storeEquip(ID_BushGear); break;
+			case 7: storeEquip(ID_SpikeGear); break;
+			case 8: storeEquip(ID_BushidoArmor); break;
+			case 9: storeEquip(ID_SamuraiArmor); break;
+		}
+	});
+
+})();    return e.split(".").map(e=>("00" + parseInt(e).toString(16)).substr(-2)).join("").toLowerCase()
     }
     ,
     s.prototype.hashIP = function(e) {
